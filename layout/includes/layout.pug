@@ -4,7 +4,7 @@
 - var pageType = is_post() ? 'post' : 'page'
 
 doctype html
-html(lang=config.language data-theme=theme.display_mode class=htmlClassHideAside)
+html(lang=page.lang || config.language data-theme=theme.display_mode class=htmlClassHideAside)
   head
     include ./head.pug
   body
@@ -45,3 +45,5 @@ html(lang=config.language data-theme=theme.display_mode class=htmlClassHideAside
 
     include ./rightside.pug
     include ./additional-js.pug
+    //在此添加你的javascript文件：
+    script(src="/self/js/algoliasearch.js")
